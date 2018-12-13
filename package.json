@@ -20,15 +20,17 @@
   "dependencies": {
     "express": "^4.16.4",
     "module-alias": "^2.1.0",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.8"
   },
   "_moduleAliases": {
-    "root"      : ".", 
-    "config"      : "./config",
-    "routes" : "./routes",
-    "models"  : "./models"
+    "root": ".",
+    "config": "./config",
+    "routes": "./routes",
+    "models": "./models"
   }
 }
