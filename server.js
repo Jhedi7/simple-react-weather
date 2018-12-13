@@ -3,10 +3,11 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 
-
-app.get('/express_backend', (req, res) => {
+app.get('/weather', (req, res) => {
   res.send({ express: 'React and Express are connected!' });
 });
 

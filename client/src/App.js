@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+
 
 class App extends Component {
   state = {
@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
+    const response = await fetch('/weather');
     const body = await response.json();
 
     if (response.status !== 200) {
