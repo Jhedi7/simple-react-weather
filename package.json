@@ -1,0 +1,26 @@
+{
+  "name": "simple-react-weather",
+  "version": "1.0.0",
+  "description": "Simple react weather app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jhedi7/simple-react-weather.git"
+  },
+  "author": "Jhedi Ayala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jhedi7/simple-react-weather/issues"
+  },
+  "homepage": "https://github.com/Jhedi7/simple-react-weather#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.8"
+  }
+}
