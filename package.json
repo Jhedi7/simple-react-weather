@@ -18,9 +18,17 @@
   },
   "homepage": "https://github.com/Jhedi7/simple-react-weather#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "module-alias": "^2.1.0",
+    "node-fetch": "^2.3.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.8"
+  },
+  "_moduleAliases": {
+    "root"      : ".", 
+    "config"      : "./config",
+    "routes" : "./routes",
+    "models"  : "./models"
   }
 }
