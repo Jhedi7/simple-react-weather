@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { setLocationTextInput, setLocationRadioInput,
           setDefaultInput } from '../../store/actions/index';
+import  RadioButtonSection  from '../Components/RadioButtonSection';
 
 const radioButtons = [
   {

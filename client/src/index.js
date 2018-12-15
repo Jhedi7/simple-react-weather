@@ -4,8 +4,20 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { App, ErrorDisplay } from './views/Components/index'
+import { Home, CurrentWeather } from './views/Containers/index';
+import store from './store/index';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <Router>
+      <App>
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/current-weather' component={CurrentWeather}/>
+        <Route exact path='/error' component={ErrorDisplay}/>
+      </App>
+    </Router>
+  </Provider>
+  , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

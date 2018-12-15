@@ -1,6 +1,6 @@
 import { put, call, takeLatest } from 'redux-saga/effects';
 import * as actions from '../actions/action-types';
-import { apiQuery } from '../../../../models/apiQuery'
+import { weatherAppAPI } from '../../weatherUtils';
 
 export default function * root () {
   yield takeLatest(actions.GET_WEATHER_DATA, fetchWeatherData);
@@ -25,8 +25,12 @@ function * fetchWeatherData(action) {
 
 function * weatherApiPromiseWrapper(weatherSearchData) {
   const promise = yield new Promise((resolve, reject) => {
-    apiQuery({}, weatherSearchData, function(err, data) {
-      err ? reject : resolve
+    weatherAppAPI({}, weatherSearchData, function(err, data) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
     })
   })
   return promise;
